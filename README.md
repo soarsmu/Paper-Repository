@@ -15,19 +15,24 @@
 - TOSEM
 - ESE (a.k.a. EMSE)
 
-## Instruction on running the Script [keyword.py](scripts/search/keywords.py) for search purpose (key word mapping on target attribute)
+## Instruction on running the Script [keywords.py](scripts/search/keywords.py) for search purpose (key word mapping on target attribute)
 
-- Modify the [conditions](scripts/search/keywords.py#L37) based on your need
+- Modify the [conditions](scripts/search/keywords.py#L39) based on your need
 - Run the script
 
 Example Query:
 ```python
-# conditions
-keywords = {'how far are we'}
+Current supporting filters with examples (set in main()):
+1. keyword(s)
+keywords = {'ecosystem'}
+2. mapping to a target attribute
 attribute = 'title'
-display_attributes = ['title', 'url', 'venue_name', 'venue_type', 'year']
+3. search within certain venue(s)  # see KEY in the venue_type_dict
+search_scope=['ase', 'icse', 'issta']
+4. search within certain year(s)
 yrs_range = [str(i) for i in range(2017, 2023)]
-
+5. result with display attribute(s)
+display_attributes = ['title', 'url', 'venue_name', 'venue_type', 'year']
 ```
 
 Example Output:
